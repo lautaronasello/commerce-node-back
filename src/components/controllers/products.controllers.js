@@ -35,7 +35,6 @@ export const getProducts = async (req, res) => {
 
     res.status(200).json(response);
   } catch (e) {
-    console.log('no entra');
     if ((e.name = 'ValidatorError')) {
       res.status(409).json(e.message);
     } else {

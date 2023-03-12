@@ -73,6 +73,7 @@ productSchema.methods.toJSON = function () {
   delete obj.is_active;
   return obj;
 };
+
 productSchema.index({ '$**': 'text' }, { name: 'textScore' });
 
 export default model('Product', productSchema);

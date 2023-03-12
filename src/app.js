@@ -5,6 +5,7 @@ import cors from 'cors';
 import router from './components/routes/products.routes.js';
 import { fileURLToPath } from 'url';
 import path from 'path';
+import userRouter from './components/routes/users.routes.js';
 
 //incializa el servidor con express
 const app = express();
@@ -22,4 +23,5 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //la ubicacion public sirve los archivos estaticos que esten en storage/img
 // app.use('/static', express.static(path.join(__dirname, 'src')));
 app.use(router);
+app.use(userRouter);
 export default app;

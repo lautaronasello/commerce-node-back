@@ -10,12 +10,14 @@ const __dirname = path.dirname(__filename);
 const main = async () => {
   try {
     await connectDB();
-    app.listen(config.PORT);
+    app.listen(config.PORT, () => {
+      console.log('server on port: ', config.PORT);
+    });
   } catch (e) {
     console.log(e);
   }
 };
 
-app.use(express.static(path.join(__dirname, 'src')));
+app.use(express.static(path.join(__dirname, '/src/storage')));
 
 main();
