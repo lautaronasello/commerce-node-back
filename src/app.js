@@ -6,6 +6,7 @@ import router from './components/routes/products.routes.js';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import userRouter from './components/routes/users.routes.js';
+import cartRoutes from './components/routes/carts.routes.js';
 
 //incializa el servidor con express
 const app = express();
@@ -24,4 +25,5 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use('/static', express.static(path.join(__dirname, 'src')));
 app.use(router);
 app.use(userRouter);
+app.use(cartRoutes);
 export default app;

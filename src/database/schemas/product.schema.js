@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
-import config from '../../config.js';
+
 const { Schema, model } = mongoose;
+
 const productSchema = Schema(
   {
     product_code: {

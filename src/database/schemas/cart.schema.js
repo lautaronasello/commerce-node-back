@@ -1,8 +1,10 @@
-import mongoose from 'mongoose';
+import mongoose, { model } from 'mongoose';
 
 const ObjectID = mongoose.Schema.Types.ObjectId;
+
 const { Schema } = mongoose;
-const cartSchema = Schema(
+
+const cartSchema = new Schema(
   {
     user: {
       type: ObjectID,
@@ -40,4 +42,6 @@ const cartSchema = Schema(
   }
 );
 
-export default model('Cart', cartSchema);
+const Cart = model('Cart', cartSchema);
+
+export default Cart;

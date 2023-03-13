@@ -63,8 +63,6 @@ export const getProductSearch = async (req, res) => {
 };
 
 export const createNewProduct = async (req, res, next) => {
-  console.log(req.file);
-  console.log(req.body);
   try {
     let requestBody = {};
     if (req.file) {

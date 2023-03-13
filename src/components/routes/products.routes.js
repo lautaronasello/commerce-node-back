@@ -11,7 +11,7 @@ import {
 
 const router = Router();
 
-router.post('/product', getProducts); // pagination service route
+router.post('/products', getProducts); // pagination service route
 router.post('/product/search', getProductSearch);
 router.get('/product/:id', getProductById);
 router.post('/product/create', upload.single('imgUrl'), createNewProduct);
